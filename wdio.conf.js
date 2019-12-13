@@ -22,6 +22,19 @@ exports.config = {
     specs: [
         './test/specs/**/*.js'
     ],
+    suites: {
+        'dev': [
+            './test/specs/basic.js'
+        ],
+        'uat': [
+            './test/specs/test-1.js',
+            './test/specs/test-2.js',
+            './test/specs/test-3.js',
+            './test/specs/test-4.js',
+            './test/specs/test-5.js',
+            './test/specs/test-6.js'
+        ]
+    },
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
@@ -42,7 +55,7 @@ exports.config = {
     // and 30 processes will get spawned. The property handles how many capabilities
     // from the same test should run tests.
     //
-    maxInstances: 10,
+    maxInstances: 5,
     //
     // If you have trouble getting all important capabilities together, check out the
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
@@ -52,7 +65,7 @@ exports.config = {
         // maxInstances can get overwritten per capability. So if you have an in-house Selenium
         // grid with only 5 firefox instances available you can make sure that not more than
         // 5 instances get started at a time.
-        maxInstances: 1,
+        maxInstances: 5,
         //
         browserName: 'chrome',
         // If outputDir is provided WebdriverIO can capture driver session logs

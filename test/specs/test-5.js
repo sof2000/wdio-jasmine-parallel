@@ -9,4 +9,7 @@ describe('demo.asteriag.com landing page title validation', () => {
     it('Title Validation', () => {
         expect(title).toBe('Asteria Bank – We Test For Better Software');
     });
+    it('Click Deposit link', () => {
+        $('a=Deposit').click();
+    })
 })
